@@ -35,10 +35,12 @@ func main() {
 		}
 	}
 
-	
+	// fmt.Println(merged) // the first part
 
 	max := 0
 	sort.Ints(merged)
-
-	fmt.Println(merged)
+	for _, i := range merged[len(merged)-3:] {
+		max += i
+	}
+	fmt.Println(max)
 }
